@@ -1,0 +1,182 @@
+/*
+    Brandon Jones
+    Banking.App.Web
+    7/12/2024
+*/
+
+/* Default styles similar to darkly theme */
+body {
+    color: #50d9da; /* Default text color */
+    background-color: #343a40; /* Default background color */
+}
+
+.container {
+    margin-top: 50px; /* Adjust as needed */
+    color: #50d9da; /* Text color */
+}
+
+.alert-custom {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #ffffff; /* Updated text color to white for better contrast */
+    background-color: rgba(0, 123, 255, 0.85); /* Semi-transparent vibrant blue background */
+    border-color: rgba(0, 123, 255, 0.85); /* Border color matches background for blend */
+}
+
+.alert-custom-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-custom-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-custom-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-custom-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Define the hero image CSS */
+.hero-image {
+    background-image: url('Bankify.png'); /* Replace with your image path */
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #50d9da; /* Text color for contrast */
+}
+
+/* Additional styling for the text inside the hero image */
+.hero-text h1 {
+    font-size: 3.5rem !important; /* Use !important to ensure this rule takes precedence */
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Adjust shadow properties as needed */
+}
+
+.hero-text p {
+    font-size: 1.5rem !important; /* Adjust as needed */
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Adjust shadow properties as needed */
+}
+
+/* Override Bootstrap button styles */
+.btn {
+    font-size: 1rem; /* Adjust font size */
+    padding: 0.75rem 1.5rem; /* Adjust padding for better button size consistency */
+    margin-bottom: 10px; /* Add margin bottom to space out the buttons */
+    display: block; /* Ensure each button occupies a full line */
+    width: 100%; /* Ensure buttons take full width of their container */
+}
+
+.btn-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.btn-success:hover {
+    color: #155724;
+    background-color: #c3e6cb;
+    border-color: #b1dfbb;
+}
+
+.btn-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.btn-danger:hover {
+    color: #721c24;
+    background-color: #f5c6cb;
+    border-color: #f1b0b7;
+}
+
+.btn-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.btn-info:hover {
+    color: #0c5460;
+    background-color: #bee5eb;
+    border-color: #abdde5;
+}
+
+.btn-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.btn-warning:hover {
+    color: #856404;
+    background-color: #ffeeba;
+    border-color: #ffe6a1;
+}
+
+.btn-primary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+
+.btn-primary:hover {
+    color: #383d41;
+    background-color: #d6d8db;
+    border-color: #c9cdd0;
+}
+
+.btn-secondary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+
+.btn-secondary:hover {
+    color: #383d41;
+    background-color: #d6d8db;
+    border-color: #c9cdd0;
+}
+
+
+/* Override Bootstrap Darkly theme for flash messages */
+.alert {
+    color: #212529 !important; /* Text color for all alert messages */
+}
+
+.alert-success {
+    background-color: #155724; /* Success message background color */
+    border-color: #155724; /* Border color for success message */
+}
+
+.alert-info {
+    background-color: #0c5460; /* Info message background color */
+    border-color: #0c5460; /* Border color for info message */
+}
+
+.alert-warning {
+    background-color: #856404; /* Warning message background color */
+    border-color: #856404; /* Border color for warning message */
+}
+
+.alert-danger {
+    background-color: #721c24; /* Danger message background color */
+    border-color: #721c24; /* Border color for danger message */
+}

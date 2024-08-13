@@ -1,0 +1,53 @@
+<!--
+    MrJ
+    Bankify.Web
+    7/12/2024
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Dashboard</h1>
+        <h3>Welcome, {{ account.name }}</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Account ID: {{ account.account_id }}</p>
+                <p>Email: {{ account.email }}</p>
+                <p>Balance: ${{ account.balance|currency }}</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <p>
+                    <a href="{{ url_for('deposit') }}" class="btn btn-success mb-2 btn-lg btn-block">Deposit</a>
+                    <a href="{{ url_for('withdraw') }}" class="btn btn-danger mb-2 btn-lg btn-block">Withdraw</a>
+                    <a href="{{ url_for('transactions') }}" class="btn btn-info mb-2 btn-lg btn-block">View Transactions</a>
+                    <a href="{{ url_for('update_account') }}" class="btn btn-warning mb-2 btn-lg btn-block">Update Account</a>
+                    <a href="{{ url_for('delete_account') }}" class="btn btn-danger mb-2 btn-lg btn-block">Delete Account</a>
+                    <a href="{{ url_for('logout') }}" class="btn btn-secondary mt-2 btn-lg btn-block">Log Out</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        {% for category, message in messages %}
+                            <div class="alert alert-custom alert-custom-{{ category }} text-center">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+    </div>
+</body>
+</html>

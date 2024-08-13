@@ -1,0 +1,125 @@
+MrJ         |
+Bankify.Web |
+7/12/2024   |
+------------
+
+The following packages are essential for my program:
+	Flask
+	Flask-SQLAlchemy
+---------------------------------------------------------------
+
+
+Test 1:
+	Ran 5 tests in 0.260s
+
+	OK
+
+Changed:
+	if account and account.check_password(password):
+		session['account_id'] = account_id
+		flash('Login successful!', 'success')
+		return redirect(url_for('dashboard'))
+
+To:
+	if account and account.check_password(password):
+		session['account_id'] = account_id
+		flash('Login sucessful!', 'success')
+		return redirect(url_for('dashboard'))
+
+Test 2:
+	Failure
+	Traceback (most recent call last):
+	File "C:\FilePathTo\test_app.py", line 66, in test_login
+	    self.assertIn(b'Login successful!', response.data)
+	AssertionError: b'Login successful!' not found
+
+Rollback to Original:
+
+Test 3:
+	Ran 5 tests in 0.208s
+
+	FAILED (failures=1)
+
+	Ran 5 tests in 0.191s
+
+	OK
+
+
+Database Testing
+---------------------------------------------------------------
+The password for all accounts is "sassword".
+
+User Accounts in Database (Account ID):
+AGarcia67
+AOrtiz155
+AOrtiz2444
+AOrtiz3333
+ASharma26
+ASharma39
+ASharma42
+ASharma68
+CMendez177
+CMendez2626
+CMendez3535
+EHernandez188
+EHernandez2727
+EHernandez3636
+EHernandez78
+EHuang22
+EHuang27
+EHuang55
+EHuang94
+EKim34
+EMendez133
+EMendez2222
+EMendez3131
+GRamos199
+GRamos2828
+GRamos910
+JGarcia166
+JGarcia2555
+JGarcia3434
+JGonzalez32
+JGonzalez41
+JGonzalez58
+JGonzalez85
+JHernandez122
+JHernandez2121
+JHernandez3030
+JLee56
+JWong29
+JWong56
+JWong81
+KBrown23
+KKim13
+KKim59
+KKim82
+KKim86
+KMartin111
+KMartin2010
+KMartin2929
+KPatel15
+KPatel53
+KPatel91
+KPatel99
+LKim144
+LKim2333
+LKim3232
+LSingh11
+LSingh19
+LSingh75
+LSingh97
+LWang45
+MChen31
+MChen61
+MChen62
+MChen74
+MLevine51
+MLevine87
+MLevine92
+MLevine93
+RHarrison12
+RHarrison23
+RHarrison46
+RHarrison67
+SMendez89
